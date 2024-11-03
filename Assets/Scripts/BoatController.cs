@@ -26,11 +26,26 @@ public class BoatController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0, rotateSpeed, 0);
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Rotate(0, -rotateSpeed, 0);
+            }
+            else
+            {
+                transform.Rotate(0, rotateSpeed, 0);
+            }
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0, -rotateSpeed, 0);
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Rotate(0, rotateSpeed, 0);
+            }
+            else
+            {
+                transform.Rotate(0, -rotateSpeed, 0);
+
+            }
         }
     }
 }
