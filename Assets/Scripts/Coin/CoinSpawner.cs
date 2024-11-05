@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour
@@ -10,6 +11,8 @@ public class CoinSpawner : MonoBehaviour
     public int maxExclusiveZ;
 
     private bool coinSpawning;
+
+    public TMP_Text coinText;
 
     void Start()
     {
@@ -28,8 +31,9 @@ public class CoinSpawner : MonoBehaviour
             GameObject coin = ObjectPool_Coin.SharedInstance.GetPooledObject();
             if (coin != null)
             {
-                Vector3 randomSpawnPosition = new Vector3(Random.Range(minInclusiveX, maxExclusiveX), 1, Random.Range(minInclusiveZ, maxExclusiveZ));
+                Vector3 randomSpawnPosition = new Vector3(Random.Range(minInclusiveX, maxExclusiveX), 0.5f, Random.Range(minInclusiveZ, maxExclusiveZ));
                 coin.transform.position = randomSpawnPosition;
+                //coin.GetComponent<PlayerCoins>().coinText = this.coinText;
                 coin.SetActive(true);
             }
             coinSpawning = false;
