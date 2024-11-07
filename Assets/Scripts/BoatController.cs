@@ -14,7 +14,7 @@ public class BoatController : MonoBehaviour
     {
         rb.GetComponent<Rigidbody>();
         speed = 3.0f;
-        rotateSpeed = 0.05f;
+        rotateSpeed = 30.0f;
     }
 
     void Update()
@@ -30,22 +30,22 @@ public class BoatController : MonoBehaviour
             transform.Rotate(swaySpeed, 0, 0);
             if (Input.GetKey(KeyCode.S))
             {
-                transform.Rotate(0, -rotateSpeed, 0);
+                transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
             }
             else
             {
-                transform.Rotate(0, rotateSpeed, 0);
+                transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
             }
         }
         if (Input.GetKey(KeyCode.A))
         {
             if (Input.GetKey(KeyCode.S))
             {
-                transform.Rotate(0, rotateSpeed, 0);
+                transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
             }
             else
             {
-                transform.Rotate(0, -rotateSpeed, 0);
+                transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
 
             }
         }
