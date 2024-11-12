@@ -8,7 +8,6 @@ public class BoatController : MonoBehaviour
 
     public float speed;
     public float rotateSpeed;
-    public float swaySpeed;
 
     void Start()
     {
@@ -27,7 +26,6 @@ public class BoatController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(swaySpeed, 0, 0);
             if (Input.GetKey(KeyCode.S))
             {
                 transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
