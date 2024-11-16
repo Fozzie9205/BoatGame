@@ -16,7 +16,7 @@ public class BoatSinWave : MonoBehaviour
 
     void Update()
     {
-        sinVal += Mathf.PI * floatSpeed * Time.deltaTime;
+        sinVal += Mathf.PI * floatSpeed * Time.unscaledDeltaTime;
         nextPosition = height * Mathf.Sin(sinVal);
         transform.Translate(Vector3.up * nextPosition);
     }
