@@ -1,5 +1,7 @@
+using NUnit.Framework.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Profiling;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,12 +15,12 @@ public class BoatController : MonoBehaviour
     public float speed;
     public float rotateSpeed;
     public float sailRotateSpeed;
-    //public float sailEfficiency = 1f;
     public float maxSpeed = 10f;
 
     private float boatSpeed;
     private float dot;
     private float dot1;
+    private float forward;
 
     void Start()
     {
@@ -65,8 +67,23 @@ public class BoatController : MonoBehaviour
         dot = Vector3.Dot(windVector, sailVector);
         dot1 = 1 - Mathf.Abs(dot);
 
-        boatSpeed = speed * Graph(dot1);
-        float forward = Mathf.Sign(Vector3.Dot(-transform.right, windVector));
+        //boatSpeed = speed * DotGraph(dot1);
+
+        float dot3 = Vector3.Dot(-transform.right, windVector);
+        if (dot3 < -0.6)
+        {
+            forward = -1;
+            boatSpeed /= 1.5f;
+        }
+        else
+        {
+            forward = 1;
+            boatSpeed = speed * DotGraph(dot1);
+        }
+        //forward = Mathf.Sign(dot3);
+
+        Debug.Log(boatSpeed);
+
         Vector3 moveDirection = -transform.right.normalized * boatSpeed * Time.deltaTime * forward;
         if (forward < 0)
         {
@@ -74,16 +91,14 @@ public class BoatController : MonoBehaviour
         }
         rb.AddForce(moveDirection, ForceMode.Impulse);
 
-        Debug.Log(boatSpeed);
-
+        //Debug.Log(boatSpeed);
         Rotation();
     }
 
-    float Graph(float x)
+    float DotGraph(float x)
     {
         return Mathf.Pow(x, 0.1f);
     }
-
     void Rotation()
     {
         if (Input.GetKey(KeyCode.S))
