@@ -18,9 +18,12 @@ public class BoatController : MonoBehaviour
     public float maxSpeed = 10f;
 
     private float boatSpeed;
-    private float dot;
-    private float dot1;
+    private float dotSail;
+    private float dotSailNew;
+    private float dotBoat;
     private float forward;
+
+    private bool dot3HasRun = false;
 
     void Start()
     {
@@ -29,60 +32,40 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
-        //float horizontal = Input.GetAxis("Horizontal");
-        //float vertical = Input.GetAxis("Vertical");
+        Movement();
+        Rotation();
+    }
 
-        /*Vector3 moveDirection = transform.right * -vertical * speed * Time.deltaTime;
-        rb.MovePosition(rb.position + moveDirection);
+    float DotGraph(float x)
+    {
+        return Mathf.Pow(x, 0.3f);
+    }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            if (Input.GetKey(KeyCode.S))
-            {
-                transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
-            }
-            else
-            {
-                transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
-            }
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            if (Input.GetKey(KeyCode.S))
-            {
-                transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
-            }
-            else
-            {
-                transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
-
-            }
-        }*/
-        //var clothX = clothWind.cloth.externalAcceleration.x;
-        //var clothZ = clothWind.cloth.externalAcceleration.z;
-
+    void Movement()
+    {
         Vector3 windVector = windZone.forward;
         Vector3 sailVector = sail.forward;
 
-        dot = Vector3.Dot(windVector, sailVector);
-        dot1 = 1 - Mathf.Abs(dot);
+        dotSail = Vector3.Dot(windVector, sailVector);
+        dotSailNew = 1 - Mathf.Abs(dotSail);
+        boatSpeed = speed * DotGraph(dotSailNew);
 
-        //boatSpeed = speed * DotGraph(dot1);
-
-        float dot3 = Vector3.Dot(-transform.right, windVector);
-        if (dot3 < -0.6)
+        dotBoat = Vector3.Dot(-transform.right, windVector);
+        if (dotBoat < -0.6)
         {
-            forward = -1;
-            boatSpeed /= 1.5f;
+            if (!dot3HasRun)
+            {
+                dot3HasRun = true;
+                forward = -1;
+                boatSpeed /= 2.0f;
+            }
         }
         else
         {
             forward = 1;
-            boatSpeed = speed * DotGraph(dot1);
+            boatSpeed = speed * DotGraph(dotSailNew);
+            dot3HasRun = false;
         }
-        //forward = Mathf.Sign(dot3);
-
-        Debug.Log(boatSpeed);
 
         Vector3 moveDirection = -transform.right.normalized * boatSpeed * Time.deltaTime * forward;
         if (forward < 0)
@@ -90,14 +73,6 @@ public class BoatController : MonoBehaviour
             moveDirection *= 0.5f;
         }
         rb.AddForce(moveDirection, ForceMode.Impulse);
-
-        //Debug.Log(boatSpeed);
-        Rotation();
-    }
-
-    float DotGraph(float x)
-    {
-        return Mathf.Pow(x, 0.1f);
     }
     void Rotation()
     {
