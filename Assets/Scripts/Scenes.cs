@@ -15,7 +15,12 @@ public class Scenes : MonoBehaviour
     }
     public void Menu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("Menu");
+    }
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
     }
     public void Quit()
     {
