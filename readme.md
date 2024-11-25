@@ -1,5 +1,8 @@
 # GAM102 # 
 
+### Description ###
+Sail around the sea and collect coins! You can use your sail to gain and lose speed by catching the wind. There is no win condition, just a game experience. Enjoy!
+
 ### Assets ###
 Ebru Dogan. January 18 2018. LowPoly Water. https://assetstore.unity.com/packages/tools/particles-effects/lowpoly-water-107563.
 
@@ -14,6 +17,5 @@ Amanz. June 17 2024. Game Input Controller Icons Free. https://assetstore.unity.
 ### Music ###
 MarcinFlorida. February 21 2023. calm ocean waves, early in the morning. https://pixabay.com/sound-effects/calm-ocean-waves-early-in-the-morning-140020/.
 
-ScottishPerson. July 13 2023. Sound Effect Seagulls. https://pixabay.com/sound-effects/sound-effect-seagulls-157829/
 ### Version ###
 The version of Unity being used is 2023.2.20f1
