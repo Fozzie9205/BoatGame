@@ -12,6 +12,8 @@ JustCreate. November 29 2023. Stylized Low Poly Rocks. https://assetstore.unity.
 Amanz. June 17 2024. Game Input Controller Icons Free. https://assetstore.unity.com/packages/2d/gui/icons/game-input-controller-icons-free-285953.
 
 ### Music ###
+MarcinFlorida. February 21 2023. calm ocean waves, early in the morning. https://pixabay.com/sound-effects/calm-ocean-waves-early-in-the-morning-140020/.
 
+ScottishPerson. July 13 2023. Sound Effect Seagulls. https://pixabay.com/sound-effects/sound-effect-seagulls-157829/
 ### Version ###
 The version of Unity being used is 2023.2.20f1
