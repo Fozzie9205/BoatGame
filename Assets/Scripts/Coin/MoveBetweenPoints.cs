@@ -33,9 +33,4 @@ public class MoveBetweenPoints : MonoBehaviour
 
         transform.RotateAround(transform.position, Vector3.up, 20 * Time.deltaTime);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        gameObject.SetActive(false);
-    }
 }
