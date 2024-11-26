@@ -3,6 +3,10 @@
 ### <ins> Description ###
 My professionalism is programming. Sail around the sea and collect coins! You can use your sail to gain and lose speed by catching the wind. You cannot raise your sail, so be aware of the direction the wind is facing. There is no win condition, just a game experience. Enjoy!
 
+### <ins> License ###
+I have chosen to use an MIT license. I chose this license because this is only a small game, and I am more than happy for people to use this software without restrictions, as long as it includes the copyright notice and license.
+The license can be viewed under the "License" file. For more information how the license and where to find it, please use this link:
+[MIT License](https://choosealicense.com/licenses/mit/)
 ### <ins> Assets  ###
 [Ebru Dogan. January 18 2018. LowPoly Water.](https://assetstore.unity.com/packages/tools/particles-effects/lowpoly-water-107563.)
 
