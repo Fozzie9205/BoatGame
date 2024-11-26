@@ -24,7 +24,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ### <ins> Description ###
-Sail around the sea and collect coins! You can use your sail to gain and lose speed by catching the wind. There is no win condition, just a game experience. Enjoy!
+Sail around the sea and collect coins! You can use your sail to gain and lose speed by catching the wind. You cannot raise your sail, so be aware of the direction the wind is facing. There is no win condition, just a game experience. Enjoy!
 
 ### <ins> Assets  ###
 Ebru Dogan. January 18 2018. LowPoly Water. https://assetstore.unity.com/packages/tools/particles-effects/lowpoly-water-107563.
