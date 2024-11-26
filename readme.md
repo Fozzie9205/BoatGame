@@ -19,5 +19,7 @@ Ciconia Studio. January 31 2024. Free Double Sided Shaders. https://assetstore.u
 ### Music ###
 MarcinFlorida. February 21 2023. calm ocean waves, early in the morning. https://pixabay.com/sound-effects/calm-ocean-waves-early-in-the-morning-140020/.
 
+### Fonts ###
+weknow. October 18 2011. Ocean. https://www.dafont.com/ocean.font.
 ### Version ###
 The version of Unity being used is 2023.2.20f1
