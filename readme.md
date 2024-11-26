@@ -14,6 +14,8 @@ JustCreate. November 29 2023. Stylized Low Poly Rocks. https://assetstore.unity.
 
 Amanz. June 17 2024. Game Input Controller Icons Free. https://assetstore.unity.com/packages/2d/gui/icons/game-input-controller-icons-free-285953.
 
+Ciconia Studio. January 31 2024. Free Double Sided Shaders. https://assetstore.unity.com/packages/vfx/shaders/free-double-sided-shaders-23087. 
+
 ### Music ###
 MarcinFlorida. February 21 2023. calm ocean waves, early in the morning. https://pixabay.com/sound-effects/calm-ocean-waves-early-in-the-morning-140020/.
 
