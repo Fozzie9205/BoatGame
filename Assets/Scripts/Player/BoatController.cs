@@ -38,7 +38,7 @@ public class BoatController : MonoBehaviour
 
     float DotGraph(float x)
     {
-        return Mathf.Pow(x, 0.3f);
+        return Mathf.Pow(x, 0.28f);
     }
 
     void Movement()
@@ -46,11 +46,12 @@ public class BoatController : MonoBehaviour
         Vector3 windVector = windZone.forward;
         Vector3 sailVector = sail.forward;
 
-        dotSail = Vector3.Dot(windVector, sailVector);
+        dotSail = Vector3.Dot(windVector.normalized, sailVector.normalized);
         dotSailNew = 1 - Mathf.Abs(dotSail);
         boatSpeed = speed * DotGraph(dotSailNew);
 
         dotBoat = Vector3.Dot(-transform.right, windVector);
+        Debug.Log(dotBoat);
         if (dotBoat < -0.6)
         {
             if (!dot3HasRun)
