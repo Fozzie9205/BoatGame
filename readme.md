@@ -5,7 +5,7 @@ My professionalism is programming. Sail around the sea and collect coins! You ca
 
 ### <ins> License ###
 I have chosen to use an MIT license. I chose this license because this is only a small game, and I am more than happy for people to use this software without restrictions, as long as it includes the copyright notice and license. I have not decided to go with another license because I feel that there is no need for my work to be constrained in any way. I love the idea of sharing my creativity and other people having the ability to do the same. 
-The license can be viewed under the "License" file. For more information how the license and where to find it, please use this link:
+The license can be viewed under the "License" file. For more information on the license and where to find it, please use this link:
 [MIT License](https://choosealicense.com/licenses/mit/)
 ### <ins> Assets  ###
 [Ebru Dogan. January 18 2018. LowPoly Water.](https://assetstore.unity.com/packages/tools/particles-effects/lowpoly-water-107563.)
