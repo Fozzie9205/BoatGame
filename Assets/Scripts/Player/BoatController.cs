@@ -28,14 +28,16 @@ public class BoatController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         rb.GetComponent<Rigidbody>();
     }
-
-    void Update()
+    private void FixedUpdate()
     {
         Movement();
         Rotation();
-
+    }
+    void Update()
+    {
         if (deathScreen.activeSelf && Input.GetKey(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

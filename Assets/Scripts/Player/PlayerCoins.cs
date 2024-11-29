@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerCoins : MonoBehaviour
 {
     public TMP_Text coinText;
-    private float coins = 0;
+    public float coins = 0;
     void Start()
     {
         

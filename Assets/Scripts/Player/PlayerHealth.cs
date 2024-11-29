@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public SaveScore saveScore;
     public GameObject deathScreen;
     public GameObject redFlash;
 
@@ -42,8 +43,15 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            redFlash.SetActive(true);
-            deathScreen.SetActive(true);
+            Death();
         }
+    }
+    
+    void Death()
+    {
+        saveScore.Save();
+        redFlash.SetActive(true);
+        deathScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
