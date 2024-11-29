@@ -33,7 +33,6 @@ public class CoinSpawner : MonoBehaviour
             {
                 Vector3 randomSpawnPosition = new Vector3(Random.Range(minInclusiveX, maxExclusiveX), 0.5f, Random.Range(minInclusiveZ, maxExclusiveZ));
                 coin.transform.position = randomSpawnPosition;
-                //coin.GetComponent<PlayerCoins>().coinText = this.coinText;
                 coin.SetActive(true);
             }
             coinSpawning = false;

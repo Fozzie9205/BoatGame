@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Profiling;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class BoatController : MonoBehaviour
@@ -10,7 +11,7 @@ public class BoatController : MonoBehaviour
     public Rigidbody rb;
     public Transform sail;
     public Transform windZone;
-    public ClothWind clothWind;
+    public GameObject deathScreen;
 
     public float speed;
     public float rotateSpeed;
@@ -34,6 +35,11 @@ public class BoatController : MonoBehaviour
     {
         Movement();
         Rotation();
+
+        if (deathScreen.activeSelf && Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     float DotGraph(float x)
