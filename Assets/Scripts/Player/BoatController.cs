@@ -51,7 +51,6 @@ public class BoatController : MonoBehaviour
         boatSpeed = speed * DotGraph(dotSailNew);
 
         dotBoat = Vector3.Dot(-transform.right, windVector);
-        Debug.Log(dotBoat);
         if (dotBoat < -0.6)
         {
             if (!dot3HasRun)
