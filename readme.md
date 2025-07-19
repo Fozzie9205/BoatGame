@@ -26,6 +26,8 @@ The license can be viewed under the "License" file. For more information on the 
 ### <ins> Fonts ###
 [weknow. October 18 2011. Ocean.](https://www.dafont.com/ocean.font)
 
+[Font Diner. Seaweed Script Regular.](https://www.1001fonts.com/seaweed-script-font.html)
+
 ### <ins> Video ###
 [Video of Game](https://falmouthac-my.sharepoint.com/:v:/r/personal/df311964_falmouth_ac_uk/Documents/GAM102/GAM102_PeerReview_Video.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wWgoy5)
 
