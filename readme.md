@@ -25,6 +25,7 @@ The license can be viewed under the "License" file. For more information on the 
 
 ### <ins> Fonts ###
 [weknow. October 18 2011. Ocean.](https://www.dafont.com/ocean.font)
+
 [Font Diner. Seaweed Script Regular.](https://www.1001fonts.com/seaweed-script-font.html)
 
 ### <ins> Video ###
